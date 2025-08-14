@@ -13,7 +13,7 @@ const dannyRouter = createBrowserRouter([
  { path: '/partners', element: <Partners />},
  { path: '/contact', element: <Contact />},
 
-])
+]);
 
 
 

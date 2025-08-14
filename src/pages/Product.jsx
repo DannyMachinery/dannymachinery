@@ -13,7 +13,7 @@ export default function Product() {
             <div className="text-center mt-24 px-4">
                 <h3 className="text-4xl font-bold">Shea kneading solved</h3>
                 <div className="w-24 h-1 bg-[#000949] mx-auto rounded-full mt-5"></div>
-                <img src={imageUrl} alt="" className="w-full md:w-[40%] px-10 py-4 rounded-md" />
+                {/* <img src={imageUrl} alt="" className="w-full md:w-[40%] px-10 py-4 rounded-md" /> */}
             </div>
             <div className="text-gray-600 text-base md:text-xl leading-relaxed max-w-2xl ml-0 md:ml-8">
                     <p className="mb-4">

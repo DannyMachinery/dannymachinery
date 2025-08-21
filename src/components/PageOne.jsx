@@ -1,14 +1,14 @@
 import { Check } from "lucide-react"
-import spn1 from "../assets/images/spn1.png";
-import spn2 from "../assets/images/spn2.jpeg";
-import spn3 from "../assets/images/spn3.png";   
+import { Link } from "react-router"
+   
 
 
 
 export default function Hero() {
-    return (<div className="min-h-screen bg-[#F6F4F0] py-12 px-1">
+    return (
+    <div className="min-h-screen bg-[#F6F4F0] py-12 px-1">
         <div className="max-w-4xl mx-auto"></div>
-        <div className="grid md:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-20 max-w-7xl mx-auto">
 
             <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-lg hover:shadow-blue-400 transition-all duration-300">
                 <div className="flex justify-center">
@@ -40,12 +40,15 @@ export default function Hero() {
                     </div>
                 </div>
                 <div className="flex space-x-2 pt-28">
-                    <button className="px-3 py-1 text-xs font-semibold bg-blue-500 text-white rounded hover:bg-blue-800 transition-colors">
+                    <Link to="https://www.instagram.com/danny_machinery?igsh=Y2NzOW13ejZuZjNv" target="blank">
+                    <button className="px-4 py-4 text-xs font-semibold bg-blue-500 text-white rounded hover:bg-blue-800 transition-colors cursor-pointer">
                         Get our impact summary
-                    </button>
-                    <button className="px-3 py-1 text-xs font-semibold bg-blue-500 text-white rounded hover:bg-blue-800 transition-colors">
+                    </button></Link>
+
+                    <Link to="/about">
+                    <button className="px-4 py-4 text-xs font-semibold bg-blue-500 text-white rounded hover:bg-blue-800 transition-colors cursor-pointer">
                         See the pitch deck
-                    </button>
+                    </button></Link>
                 </div>
             </div>
 
@@ -78,45 +81,18 @@ export default function Hero() {
                         <span> Support local distribution and visibility</span>
                     </div>
 
-                    <button className="px-3 py-1 text-xs font-semibold bg-blue-500 text-white rounded hover:bg-blue-800 transition-colors">
+                        <Link to="/partnerwithus">
+                    <button className="px-4 py-4 mt-8 text-xs font-semibold bg-blue-500 text-white rounded hover:bg-blue-800 transition-colors cursor-pointer">
                         Partner with Us
-                    </button>
+                    </button></Link>
 
                 </div>
                 
             </div>
 
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-lg hover:shadow-blue-400 transition-all duration-300">
-                <div className="flex justify-center mb-4">
-                    <div className="w-12 h-8 rounded-full flex items-center justify-center">
-                    </div>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 text-center mb-3">Built for Women Who Process Shea.<br/> What Relief Looks Like. </h3>
-                <p className="text-sm text-gray-600 text-center mb-4 leading-relaxed"> Hours of kneading used to be part of the job. Now, a simple machine is changing that —giving women back their time, strength, and peace of mind. It’s not just faster. It’s freedom.<br />
-                    We’re designing tools for the women we grew up with. That’s why every version starts
-                    with their voice — not ours</p>
+           
 
-            </div>
-
-            <div className="bg-white rounded-xl p-6 shadow-sm border border-gray-200 hover:shadow-lg hover:shadow-blue-400 transition-all duration-300">
-                <div className="flex justify-center mb-4 ">
-                    <div className="w-12 h-8 rounded-full flex items-center justify-center">
-                    </div>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 text-center mb-3">Word is spreading </h3>
-                <p className="text-sm text-gray-600 text-center mb-4 leading-relaxed">  Trusted by cooperatives and supported by real partners on the ground <br />  KIC | Tondaar| GSA | </p>
-
-                <div className="flex justify-center items-center space-x-4 mb-8">
-                    <img src={spn1} alt="Partner 1" className="w-16 h-16 object-cover rounded-full" />
-                    <img src={spn2} alt="Partner 2" className="w-16 h-16 object-cover rounded-full" />
-                    <img src={spn3} alt="Partner 3" className="w-16 h-16 object-cover rounded-full" />
-                </div>
-
-
-                <button className="px-3 py-1 text-xs font-semibold bg-blue-500 text-white rounded hover:bg-blue-800 transition-colors mt-96">
-                    Be Part of the Buzz
-                </button>
-            </div>
+            
 
 
 

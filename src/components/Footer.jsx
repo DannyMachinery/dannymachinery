@@ -42,7 +42,7 @@ export default function Footer() {
                             <li className="flex items-center gap-3 text-sm"><a href=" https://vm.tiktok.com/ZMSTuFf6x/ " className="text-sm text-[#000949] hover:text-black transition-colors duration-300">Tik Tok</a></li>
 
 
-                            <li className="flex items-center gap-3 text-sm"><a href="#" className="text-sm text-[#000949] hover:text-black transition-colors duration-300">Instagram</a></li>
+                            <li className="flex items-center gap-3 text-sm"><a href="https://www.instagram.com/danny_machinery?igsh=Y2NzOW13ejZuZjNv" className="text-sm text-[#000949] hover:text-black transition-colors duration-300">Instagram</a></li>
 
                             <li className="flex items-center gap-3 text-sm">
                                 <Phone className="text-[#000949] w-4 h-4 stroke-[3]" />

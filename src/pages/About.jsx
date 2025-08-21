@@ -3,6 +3,7 @@ import Footer from '../components/Footer';
 import dmteam from '../assets/images/dmteam.png';
 import Photocard from '../components/Photocard';
 import mach2 from '../assets/images/mach2.jpg';
+import { Link } from 'react-router';
 
 
 
@@ -25,7 +26,7 @@ export default function About() {
 
             <div className="flex flex-col md:flex-row justify-center items-center mt-20 px-4">
 
-                <img src={mach2} alt="Danny Machinery Logo" className="w-full md:w-[40%] py-10 px-4 rounded-md" />
+                <img src={mach2} alt="Danny Machinery Logo" className="w-full max-w-xl py-10 px-4 rounded-full" />
 
                 <div className="md:w-[60%] w-full px-4">
                     <h4 className="text-4xl font-bold mb-4"></h4>
@@ -53,6 +54,7 @@ export default function About() {
                             src={dmteam}
                             className="w-full max-w-4xl h-75 object-cover rounded-lg shadow-md"
                         />
+                        
                     </div>
 
                 </div>
@@ -60,7 +62,10 @@ export default function About() {
             </div>
 
             <div className="bg-white py-10 px-4 my-8 rounded-lg">
-                <div className=" text-[#000949]  text-center mt-24 px-4 ">
+                <div className="flex flex-col md:flex-row md:space-x-12">
+
+                    <div className="flex-1">
+                <div className=" text-[#000949]  text-center mt-12 px-4 ">
                     <h3 className="text-4xl font-bold">Why kneading is the focus</h3>
                     <div className="w-24 h-1 bg-[#000949] mx-auto rounded-full mt-5"></div>
                 </div>
@@ -76,16 +81,20 @@ export default function About() {
                     tackles this stage directly.
                 </p>
 
-                <div className=" text-[#000949]  text-center mt-24 px-4 ">
+                        <div className="flex-1">
+                <div className=" text-[#000949]  text-center mt-12 px-4 ">
                     <h3 className="text-4xl font-bold">Mission and values</h3>
                     <div className="w-24 h-1 bg-[#000949] mx-auto rounded-full mt-5"></div>
                 </div>
                 <p className="text-gray-600 text-base md:text-lg max-w-3xl mx-auto text-center pt-4">
-                    Our Mission: To design and manufacture efficient, easy -t o- u se kneading machines that
+                    Our Mission: To design and manufacture efficient, easy to use kneading machines that
                     enhance shea butter production, empowering women and promoting sustainable
                     economic development.<br />
                     Our Values: Innovation , Empowerment , Sustainability , Quality,  and Integrity </p>
+                    </div>
 
+            </div>
+            </div>
             </div>
 
 

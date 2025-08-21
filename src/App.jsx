@@ -4,6 +4,8 @@ import About from "./pages/About";
 import Product from "./pages/Product";
 import Partners from "./pages/Partners";
 import Contact from "./pages/Contact";
+import PartnerWithUs from "./pages/PartnerWithUs";
+import RequestDemo from "./pages/RequestDemo";
 
 
 
@@ -13,6 +15,8 @@ const dannyRouter = createBrowserRouter([
  { path: '/product', element: <Product /> },
  { path: '/partners', element: <Partners />},
  { path: '/contact', element: <Contact />},
+ { path: '/partnerwithus', element: <PartnerWithUs />},
+ { path: '/requestdemo', element: <RequestDemo />},
 
 ]);
 

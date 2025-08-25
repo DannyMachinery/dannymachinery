@@ -22,7 +22,7 @@ export default function RequestDemo() {
           {/* Right Div - Price & Button */}
           <div className="w-full md:w-1/2 flex flex-col items-center justify-center p-8 text-center">
             <h2 className="text-3xl font-bold text-gray-800 mb-6">
-              Quoted Price: <span className="text-blue-600">GHc 299</span>
+              Quoted Price: <span className="text-blue-600">GHc 15,000</span>
             </h2>
 
 

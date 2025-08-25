@@ -1,7 +1,49 @@
+import { useState } from "react";
 import Navbar from "../components/Navbar";
 import { MapPin, Mail, MessageCircle } from "lucide-react";
+import { sendContactMessage } from "../api/client.js";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    organization: '',
+    contact: '',
+    inquiryType: '',
+    message: ''
+  });
+  const [isLoading, setIsLoading] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setSubmitStatus(null);
+
+    try {
+      await sendContactMessage(formData);
+      setSubmitStatus('success');
+      setFormData({
+        fullName: '',
+        organization: '',
+        contact: '',
+        inquiryType: '',
+        message: ''
+      });
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error('Error sending message:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
     <>
       <Navbar />
@@ -27,7 +69,19 @@ export default function Contact() {
                 Send us a message
               </h2>
               
-              <form className="space-y-6">
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+                  Message sent successfully! We'll get back to you soon.
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+                  Failed to send message. Please try again.
+                </div>
+              )}
+              
+              <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Full Name */}
                 <div>
                   <label htmlFor="fullName" className="block text-sm font-medium text-gray-700 mb-2">
@@ -37,6 +91,8 @@ export default function Contact() {
                     type="text"
                     id="fullName"
                     name="fullName"
+                    value={formData.fullName}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000949] focus:border-transparent outline-none transition-colors"
                     placeholder="Enter your full name"
@@ -52,6 +108,8 @@ export default function Contact() {
                     type="text"
                     id="organization"
                     name="organization"
+                    value={formData.organization}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000949] focus:border-transparent outline-none transition-colors"
                     placeholder="Enter your organization name"
                   />
@@ -66,6 +124,8 @@ export default function Contact() {
                     type="text"
                     id="contact"
                     name="contact"
+                    value={formData.contact}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000949] focus:border-transparent outline-none transition-colors"
                     placeholder="Enter your phone number or email"
@@ -80,6 +140,8 @@ export default function Contact() {
                   <select
                     id="inquiryType"
                     name="inquiryType"
+                    value={formData.inquiryType}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000949] focus:border-transparent outline-none transition-colors bg-white"
                   >
@@ -99,6 +161,8 @@ export default function Contact() {
                     id="message"
                     name="message"
                     rows="5"
+                    value={formData.message}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#000949] focus:border-transparent outline-none transition-colors resize-vertical"
                     placeholder="Tell us about your inquiry..."
@@ -108,9 +172,10 @@ export default function Contact() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="w-full bg-[#000949] text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-800 transition-colors focus:ring-2 focus:ring-[#000949] focus:ring-offset-2 outline-none cursor-pointer"
+                  disabled={isLoading}
+                  className="w-full bg-[#000949] text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-800 transition-colors focus:ring-2 focus:ring-[#000949] focus:ring-offset-2 outline-none cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Send Message
+                  {isLoading ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </div>

@@ -4,6 +4,8 @@ import { Check } from "lucide-react";
 import Testimonials from "../components/Testimonials";
 import dms2 from "../assets/images/dms2.png";
 import { Link } from "react-router";
+import nsd1 from "../assets/images/nsd1.jpg"; 
+import dms from "../assets/images/dms.png";
 
 export default function Product() {
   const features = [
@@ -22,11 +24,11 @@ export default function Product() {
       <Navbar />
 
       {/* Hero Section */}
-      <section className="bg-white py-16 px-4">
+      <section className="bg-white py-1 px-4">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-[#000949] mb-6">
-              Our Products
+              Our Product
             </h1>
             <p className="text-[#000949] text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
               Our Machine kneads up to 70kg of shea paste in 20 minutes — no hand
@@ -41,7 +43,7 @@ export default function Product() {
         <div className="max-w-6xl mx-auto">
           
           {/* Product Card */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden mb-12">
+          <div className="bg-white rounded-xl shadow-lg overflow-hidden mt-4 mb-18">
             <div className="grid md:grid-cols-2 gap-8">
               
               {/* Product Image */}
@@ -95,12 +97,12 @@ export default function Product() {
             {/* Product Card 2 - Example for future products */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                <img src={dms2} alt="equipment image" 
+                <img src={dms} alt="equipment image" 
                 className="w-full h-full object-cover"/>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-[#000949] mb-2">
-                  Shea Roasting Equipment
+                  Shea Butter Processing Machine
                 </h3>
               </div>
             </div>
@@ -113,19 +115,19 @@ export default function Product() {
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-[#000949] mb-2">
-                  Shea Roasting Equipment
+                  Shea butter Processing Machine
                 </h3>
               </div>
             </div>
             {/* Product Card 4 - Example */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                <img src={dms2} alt="equipment image" 
+                <img src={nsd1} alt="equipment image" 
                 className="w-full h-full object-cover"/>
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-semibold text-[#000949] mb-2">
-                  Shea Roasting Equipment
+                 Part of the Shea Butter Processing Machine
                 </h3>
               </div>
             </div>

@@ -37,7 +37,8 @@ export default function Footer() {
                         <ul className="space-y-2">
 
                             <li className="flex items-center gap-3 text-sm">
-                                <a href=" https://www.linkedin.com/in/danny-machinery-20a828342/ " className="text-sm text-[#000949] hover:text-black transition-colors duration-300">LinkedIn</a></li>
+                                <a href=" https://www.linkedin.com/in/danny-machinery-20a828342/ " 
+                                className="text-sm text-[#000949] hover:text-black transition-colors duration-300">LinkedIn</a></li>
 
                             <li className="flex items-center gap-3 text-sm"><a href=" https://vm.tiktok.com/ZMSTuFf6x/ " className="text-sm text-[#000949] hover:text-black transition-colors duration-300">Tik Tok</a></li>
 

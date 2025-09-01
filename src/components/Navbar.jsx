@@ -3,7 +3,7 @@ import dmlogo1 from "../assets/images/dmlogo.jpg"
 
 export default function Navbar() {
     return (
-        <nav className="bg-white px-6 py-3">
+        <nav className="bg-white px-6 py-3 sticky top-0 z-50 shadow-md">
             <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-1 ml-20">
                     

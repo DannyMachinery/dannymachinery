@@ -4,8 +4,9 @@ import { Check } from "lucide-react";
 import Testimonials from "../components/Testimonials";
 import dms2 from "../assets/images/dms2.png";
 import { Link } from "react-router";
-import nsd1 from "../assets/images/nsd1.jpg"; 
-import dms from "../assets/images/dms.png";
+import dan1 from '../assets/images/dan1.jpg';
+import dan2 from '../assets/images/dan2.jpg'; 
+
 
 export default function Product() {
   const features = [
@@ -49,7 +50,7 @@ export default function Product() {
               {/* Product Image */}
               <div className="p-8 flex items-center justify-center bg-gradient-to-br from-blue-50 to-cyan-50">
                 <img
-                  src={dms2}
+                  src={dan2}
                   alt="Danny Machinery Shea Butter Kneading Machine"
                   className="w-full max-w-md h-auto object-cover rounded-lg shadow-md"
                 />
@@ -92,17 +93,17 @@ export default function Product() {
           </div>
 
           {/* Additional Product Cards - Add more products here */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-6">
             
             {/* Product Card 2 - Example for future products */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                <img src={dms} alt="equipment image" 
-                className="w-full h-full object-cover"/>
+                <img src={dan1} alt="equipment image" 
+                className="w-full h-[400px] object-cover"/>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-[#000949] mb-2">
-                  Shea Butter Processing Machine
+                <h3 className="text-xl font-semibold text-[#000949] mb-14">
+                  
                 </h3>
               </div>
             </div>
@@ -110,27 +111,17 @@ export default function Product() {
             {/* Product Card 3 - Example */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
               <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                <img src={dms2} alt="equipment image" 
-                className="w-full h-full object-cover"/>
+                <img src={dan2} alt="equipment image" 
+                className="w-full h-[400px] object-cover"/>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-[#000949] mb-2">
-                  Shea butter Processing Machine
+                <h3 className="text-xl font-semibold text-[#000949] mb-14">
+                  
                 </h3>
               </div>
             </div>
-            {/* Product Card 4 - Example */}
-            <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
-                <img src={nsd1} alt="equipment image" 
-                className="w-full h-full object-cover"/>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-[#000949] mb-2">
-                 Part of the Shea Butter Processing Machine
-                </h3>
-              </div>
-            </div>
+            
+            
           </div>
 
         </div>

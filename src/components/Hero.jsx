@@ -1,4 +1,4 @@
-import dms from '../assets/images/dms.png';
+import dan1 from '../assets/images/dan1.jpg';
 import { Link } from 'react-router';
 
 export default function Hero() {
@@ -41,7 +41,7 @@ export default function Hero() {
         {/* Right Image Section */}
         <div className="md:w-1/2 flex justify-center">
           <img
-            src={dms}
+            src={dan1}
             alt="Danny Machinery shea butter kneading machine"
             className="w-96 h-96 rounded-lg shadow-md object-cover"
           />

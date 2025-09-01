@@ -1,6 +1,7 @@
 import Navbar from "../components/Navbar";
 import dms2 from "../assets/images/dms2.png";
 import { Link } from "react-router";
+import demovid from '../assets/images/demovid.mp4';
 
 export default function RequestDemo() {
   return (
@@ -11,7 +12,7 @@ export default function RequestDemo() {
         <div className="max-w-5xl w-full flex flex-col md:flex-row bg-white shadow-xl rounded-2xl overflow-hidden mt-20">
           
           {/* Left Div - Image */}
-          <div className="w-full md:w-1/2 flex items-center justify-center bg-gray-100">
+          <div className="w-full md:w-1/2 flex items-center justify-center bg-gray-100 pb-10">
             <img
               src={dms2}
               alt="Product Demo"
@@ -21,6 +22,17 @@ export default function RequestDemo() {
 
           {/* Right Div - Price & Button */}
           <div className="w-full md:w-1/2 flex flex-col items-center justify-center p-8 text-center">
+            <video
+                      src={demovid}
+                      autoPlay
+                    
+                      loop
+                      playsInline
+                      className="w-full rounded-lg shadow"
+                    >
+                      Your browser does not support the video tag.
+                    </video>
+
             <h2 className="text-3xl font-bold text-gray-800 mb-6">
               Quoted Price: <span className="text-blue-600">GHc 15,000</span>
             </h2>
